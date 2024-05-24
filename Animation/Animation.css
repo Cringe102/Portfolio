@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.videobox{
+    width: 100%;
+    transition: transform 1s ease-in;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 400px;
+    width: 400px;
+}
+
+.child {
+    background-color: darkorange;
+    height: 50%;
+    width: 50%;
+    transition: transform 10s;
+}
+
+.parent:hover .child {
+    animation: left-to-right 10s ease-in;
+}
+
+@keyframes left-to-right{
+    0% {
+        transform: translateX(0%); transform: translateY(0%);
+    }
+
+    12.5% {
+        transform: translateX(0%); transform: translateY(50%);
+    }
+
+    25% {
+        transform: translate(0%); transform: translateY(0%);
+    }
+    
+    37.5% {
+        transform: translateX(50%); transform: translateX(50%);
+    }
+
+    50% {
+        transform: translateX(0%); transform: translateY(0%);
+    }
+
+    67.5% {
+        transform: translateX(50%); transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateX(0%); transform: translateY(0%);
+    }
+
+    87.5% {
+        transform: translateX(50%); transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateX(0%); transform: translateY(0%);
+    }
+}

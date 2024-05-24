@@ -1,0 +1,29 @@
+input{
+    display: block;
+}
+label{
+    display: block;
+}
+.button{
+    display: flex;
+}
+textarea{
+    resize: none;
+}
+.btn-cta{
+    all: unset;
+    font-family: inherit;
+    color: rgb(206, 206, 206);
+    background-color: rgb(157, 14, 209);
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    display: block;
+    cursor: pointer;
+}
+
+.cta-btn{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}

@@ -1,0 +1,167 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(45deg, rgb(0, 255, 17), rgb(225, 255, 0));
+}
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin-inline: auto;
+}
+
+h1{ 
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+main{
+    width: 60%;
+    margin-inline: auto;
+    display: flex;
+    gap: 2rem;
+}
+
+.column-section{
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.primary-navigation{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+.grid-row{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.grid-row:nth-child(odd){
+    background: grey;
+}
+
+.item{
+    list-style: upper-roman;
+}
+
+/* text styling */
+
+p{
+    margin-top: 0;
+    font-weight: 100;
+}
+
+/* link styling */
+
+a,
+a:visited{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.nav-link,
+.nav-link:visited{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: rgb(0, 115, 119);
+}
+
+.nav-link:active{
+    color: red;
+}
+
+.content-link,
+.content-link:visited{
+    color: black;
+}
+
+.content-link:hover{
+    color: rgb(116, 116, 116);
+}
+
+.content-link:active{
+    color: rgb(0, 50, 167);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.skip-link{
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 1rem;
+    padding: 1rem 2rem;
+
+    font-size: 1.125rem;
+    text-decoration: underline;
+    text-underline-offset: 0,5rem;
+
+    color: black;
+    background-color: white;
+
+    translate: 0 -100%;
+    transition: translate 250ms ease-in-out;
+}
+
+.skip-link:focus{
+    z-index: 9999;
+    translate: 0;
+}
+
+.hamburger-button{
+    all:unset;
+    display:none;
+}
+
+@media (width < 480px) {
+    .primary-navigation{
+        display: none;
+    }
+    .hamburger-button{
+        display:block;
+     }
+     .primary-navigation {
+        position: fixed;
+        inset: 0;
+        top: 4rem;
+ 
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        flex-direction: column;
+        
+        padding: 4rem 2rem;
+        
+        background: darkgray;
+        opacity: 0;
+ 
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out,
+                    opacity 250ms ease-in-out;
+    }
+ 
+    .primary-navigation.open {
+      transform: translateX(0);
+      opacity: 1;
+   }
+   aside{
+    display: none;
+   }
+}
